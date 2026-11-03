@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Generator · SoundFaith</title>
+    <meta name="description" content="Free, private QR code generator. Runs entirely in your browser." />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="theme-color" content="#6366f1" />
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <main class="mx-auto flex min-h-screen max-w-md flex-col justify-center px-4 py-10">
+      <header class="mb-8 flex items-center gap-3">
+        <img src="/logo.svg" alt="" class="h-11 w-11" />
+        <div>
+          <h1 class="text-xl font-semibold leading-tight">QR Generator</h1>
+          <p class="text-sm text-slate-500">by SoundFaith</p>
+        </div>
+      </header>
+
+      <section class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+        <label for="text" class="mb-1.5 block text-sm font-medium">Text or URL</label>
+        <textarea id="text" rows="3" placeholder="https://soundfaith.app"
+          class="w-full resize-none rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"></textarea>
+
+        <div class="mt-4 flex items-center gap-4">
+          <label class="flex items-center gap-2 text-sm">Color
+            <input id="fg" type="color" value="#312e81" class="h-8 w-10 cursor-pointer rounded border border-slate-300" />
+          </label>
+          <label class="flex items-center gap-2 text-sm">Background
+            <input id="bg" type="color" value="#ffffff" class="h-8 w-10 cursor-pointer rounded border border-slate-300" />
+          </label>
+        </div>
+
+        <div class="mt-5 flex min-h-64 items-center justify-center rounded-xl bg-slate-100 p-4">
+          <canvas id="canvas" class="hidden h-auto max-w-full rounded"></canvas>
+          <p id="empty" class="text-sm text-slate-400">Your QR code will appear here</p>
+        </div>
+
+        <div class="mt-4 grid grid-cols-2 gap-3">
+          <button id="png" disabled
+            class="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-40">Download PNG</button>
+          <button id="svg" disabled
+            class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40">Download SVG</button>
+        </div>
+      </section>
+
+      <p class="mt-6 text-center text-xs text-slate-400">Generated in your browser. Nothing is uploaded.</p>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
