@@ -103,7 +103,7 @@ function download(href, name) {
 
 const pngBlob = async () => {
   const c = document.createElement("canvas");
-  await draw(c, 1024, 32, value());
+  await draw(c, 1024, 2, value());
   return new Promise((res) => c.toBlob(res, "image/png"));
 };
 
