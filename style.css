@@ -4,4 +4,8 @@
 
 @theme {
   --color-accent: #f5a524;
+  --color-night: #10191c;
+  --color-night-surface: #1a262a;
+  --color-night-hover: #27363a;
+  --color-night-border: #344448;
 }

@@ -1,15 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="a" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#fcd34d"/>
-      <stop offset="1" stop-color="#f59e0b"/>
+    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1e4142"/>
+      <stop offset="1" stop-color="#101d25"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="12" y1="12" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffe7a3"/>
+      <stop offset="1" stop-color="#d9a84f"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="18" fill="#0c0a09"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M13 13h15v15H13V13Zm4 4v7h7v-7h-7Z" fill="url(#a)"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M36 13h15v15H36V13Zm4 4v7h7v-7h-7Z" fill="url(#a)"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M13 36h15v15H13V36Zm4 4v7h7v-7h-7Z" fill="url(#a)"/>
-  <rect x="36" y="45" width="4.5" height="6" rx="2.25" fill="url(#a)"/>
-  <rect x="42.75" y="39" width="4.5" height="12" rx="2.25" fill="url(#a)"/>
-  <rect x="49.5" y="42" width="4.5" height="9" rx="2.25" fill="url(#a)"/>
+  <rect x="1" y="1" width="62" height="62" rx="18" fill="url(#bg)"/>
+  <rect x="1" y="1" width="62" height="62" rx="18" stroke="#fff8e8" stroke-opacity=".2" stroke-width="2"/>
+  <g fill="url(#gold)">
+    <rect x="11" y="11" width="17" height="17" rx="4"/>
+    <rect x="36" y="11" width="17" height="17" rx="4"/>
+    <rect x="11" y="36" width="17" height="17" rx="4"/>
+    <rect x="16" y="16" width="7" height="7" rx="2" fill="#173033"/>
+    <rect x="41" y="16" width="7" height="7" rx="2" fill="#173033"/>
+    <rect x="16" y="41" width="7" height="7" rx="2" fill="#173033"/>
+    <rect x="37" y="37" width="6" height="6" rx="1.5"/>
+    <rect x="46" y="37" width="7" height="6" rx="1.5"/>
+    <rect x="37" y="46" width="6" height="7" rx="1.5"/>
+    <rect x="46" y="46" width="7" height="7" rx="1.5"/>
+  </g>
 </svg>

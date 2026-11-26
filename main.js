@@ -83,7 +83,7 @@ function paintSwatches() {
     b.style.backgroundColor = c;
     b.className =
       "h-5 w-5 rounded-full ring-1 ring-white/20 transition hover:scale-110 " +
-      (c === color ? "ring-2 ring-offset-2 ring-offset-stone-50 !ring-accent dark:ring-offset-stone-950" : "");
+      (c === color ? "ring-2 ring-offset-2 ring-offset-stone-50 !ring-accent dark:ring-offset-night" : "");
     b.onclick = () => {
       color = c;
       paintSwatches();
@@ -117,8 +117,8 @@ function revealAbout(shouldScroll = false) {
   localStorage.setItem("soundfaith_qr_exported", "true");
   about.setAttribute("aria-hidden", "false");
   const show = () => {
-    about.classList.remove("max-h-0", "border-stone-200/0", "dark:border-stone-800/0", "opacity-0");
-    about.classList.add("max-h-96", "border-stone-200", "dark:border-stone-800", "opacity-100");
+    about.classList.remove("max-h-0", "border-stone-200/0", "dark:border-night-border/0", "opacity-0");
+    about.classList.add("max-h-96", "border-stone-200", "dark:border-night-border", "opacity-100");
   };
   if (about.hidden) {
     about.hidden = false;
